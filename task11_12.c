@@ -34,7 +34,7 @@ void handle_pchar(stack_t **buff, unsigned int l_num)
 void handle_pstr(stack_t **buff, __attribute__ ((unused))unsigned int l_num)
 {
 	stack_t *step;
-	int ascii;
+	int a_s;
 
 	if (buff == NULL || *buff == NULL)
 	{
@@ -45,10 +45,10 @@ void handle_pstr(stack_t **buff, __attribute__ ((unused))unsigned int l_num)
 
 	while (step != NULL)
 	{
-		ascii = step->n;
-		if (ascii <= 0 || ascii > 127)
+		a_s = step->n;
+		if (a_s <= 0 || a_s > 127)
 			break;
-		_putchar(ascii);
+		_putchar(a_s);
 		step = step->next;
 	}
 	_putchar('\n');
