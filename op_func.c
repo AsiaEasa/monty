@@ -99,7 +99,7 @@ int p_line(char *buff, int l_num, int f)
 	if (buff == NULL)
 	{ fprintf(stderr, "Error: malloc failed\n");
 		handle_exit(&head); }
-	op = strtok(buff, "\n ");
+	op = strtok(buff, "\n");
 	if (op == NULL)
 		return (f);
 	val = strtok(NULL, "\n");
