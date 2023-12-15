@@ -7,7 +7,7 @@
  */
 void handle_pchar(stack_t **buff, unsigned int l_num)
 {
-	int ascii;
+	int a_s;
 
 	if (buff == NULL || *buff == NULL)
 	{
@@ -15,14 +15,14 @@ void handle_pchar(stack_t **buff, unsigned int l_num)
 		handle_exit(buff);
 	}
 
-	ascii = (*buff)->n;
+	a_s = (*buff)->n;
 
-	if (ascii < 0 || ascii > 127)
+	if (a_s < 0 || ascii > 127)
 	{
 		fprintf(stderr, "L%d: can't pchar, value out of range\n", l_num);
 		handle_exit(buff);
 	}
-	_putchar(ascii);
+	_putchar(a_s);
 	_putchar('\n');
 }
 
