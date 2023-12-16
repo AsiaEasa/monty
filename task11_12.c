@@ -7,7 +7,7 @@
  */
 void handle_pchar(stack_t **buff, unsigned int l_num)
 {
-	int ascii;
+	int a_s;
 
 	if (buff == NULL || *buff == NULL)
 	{
@@ -15,15 +15,20 @@ void handle_pchar(stack_t **buff, unsigned int l_num)
 		handle_exit(buff);
 	}
 
-	ascii = (*buff)->n;
+	a_s = (*buff)->n;
 
-	if (ascii < 0 || ascii > 127)
+	if (a_s < 0 || a_s > 127)
 	{
 		fprintf(stderr, "L%d: can't pchar, value out of range\n", l_num);
 		handle_exit(buff);
 	}
+<<<<<<< HEAD
 	putchar(ascii);
 	putchar('\n');
+=======
+	_putchar(a_s);
+	_putchar('\n');
+>>>>>>> 62ee410987287cc766aa0f89185092adb40c634b
 }
 
 /**
@@ -34,7 +39,7 @@ void handle_pchar(stack_t **buff, unsigned int l_num)
 void handle_pstr(stack_t **buff, __attribute__ ((unused))unsigned int l_num)
 {
 	stack_t *step;
-	int ascii;
+	int a_s;
 
 	if (buff == NULL || *buff == NULL)
 	{
@@ -45,10 +50,14 @@ void handle_pstr(stack_t **buff, __attribute__ ((unused))unsigned int l_num)
 
 	while (step != NULL)
 	{
-		ascii = step->n;
-		if (ascii <= 0 || ascii > 127)
+		a_s = step->n;
+		if (a_s <= 0 || a_s > 127)
 			break;
+<<<<<<< HEAD
 		putchar(ascii);
+=======
+		_putchar(a_s);
+>>>>>>> 62ee410987287cc766aa0f89185092adb40c634b
 		step = step->next;
 	}
 	putchar('\n');
