@@ -22,13 +22,8 @@ void handle_pchar(stack_t **buff, unsigned int l_num)
 		fprintf(stderr, "L%d: can't pchar, value out of range\n", l_num);
 		handle_exit(buff);
 	}
-<<<<<<< HEAD
-	putchar(ascii);
+	putchar(a_s);
 	putchar('\n');
-=======
-	_putchar(a_s);
-	_putchar('\n');
->>>>>>> 62ee410987287cc766aa0f89185092adb40c634b
 }
 
 /**
@@ -53,11 +48,7 @@ void handle_pstr(stack_t **buff, __attribute__ ((unused))unsigned int l_num)
 		a_s = step->n;
 		if (a_s <= 0 || a_s > 127)
 			break;
-<<<<<<< HEAD
-		putchar(ascii);
-=======
-		_putchar(a_s);
->>>>>>> 62ee410987287cc766aa0f89185092adb40c634b
+		putchar(a_s);
 		step = step->next;
 	}
 	putchar('\n');
